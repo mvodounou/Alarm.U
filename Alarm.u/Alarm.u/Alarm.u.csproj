@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
+    <PackageReference Include="Prism.Unity.Forms" Version="8.1.97" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="20.4.0.53" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Styles\" />
+    <None Remove="Fonts\" />
+    <None Remove="Fonts\Sen-Bold.ttf" />
+    <None Remove="Fonts\Sen-ExtraBold.ttf" />
+    <None Remove="Fonts\Sen-Regular.ttf" />
+    <None Remove="Utilities\" />
+    <None Remove="Fonts\fa-regular.ttf" />
+    <None Remove="Controls\" />
+    <None Remove="TemplateSelector\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Styles\" />
+    <Folder Include="Fonts\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Controls\" />
+    <Folder Include="TemplateSelector\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\Sen-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\Sen-ExtraBold.ttf" />
+    <EmbeddedResource Include="Fonts\Sen-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\fa-regular.ttf" />
+  </ItemGroup>
+</Project>
